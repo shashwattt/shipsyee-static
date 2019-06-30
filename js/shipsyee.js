@@ -51,4 +51,34 @@ $(document).ready(function() {
         makeDestinationList(filteredList);
     }
 
+    var loginButton = document.querySelector('#login-user');
+    var registerButton = document.querySelector('#register-user');
+
+    var loginDialog = document.querySelector('#login-dialog');
+    var registerDialog = document.querySelector('#register-dialog');
+
+    if (!loginDialog.showModal) {
+        dialogPolyfill.registerDialog(loginDialog);
+    }
+    if (!registerDialog.showModal) {
+        dialogPolyfill.registerDialog(registerDialog);
+    }
+
+    loginButton.addEventListener('click', function() {
+        loginDialog.showModal();
+    });
+    registerButton.addEventListener('click', function() {
+        registerDialog.showModal();
+    });
+
+    loginDialog.querySelector('#cancel-login')
+        .addEventListener('click', function() {
+            loginDialog.close();
+        });
+
+    registerDialog.querySelector('#cancel-register')
+        .addEventListener('click', function() {
+            registerDialog.close();
+        });
+
 });

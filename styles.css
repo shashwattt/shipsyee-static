@@ -477,6 +477,10 @@ a img {
     background-color: #dfdfdf
 }
 
+.register-dialog {
+    width: 420px;
+}
+
 
 /**** Mobile layout ****/
 

@@ -48,8 +48,8 @@
                 <!-- Navigation -->
                 <div class="shipsyee-navigation-container">
                     <nav class="shipsyee-navigation mdl-navigation">
-                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Login</a>
-                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Register</a>
+                        <a id="login-user" class="mdl-navigation__link mdl-typography--text-uppercase">Login</a>
+                        <a id="register-user" class="mdl-navigation__link mdl-typography--text-uppercase">Register</a>
                         <!-- <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Wear</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">TV</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Auto</a>
@@ -328,9 +328,62 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/dialog-polyfill.js"></script>
     <script async src="./js/shipsyee.js"></script>
 
+    <dialog id="login-dialog" class="mdl-dialog">
+        <h3 class="mdl-dialog__title">Login</h3>
+        <div class="mdl-dialog__content">
+            <form action="#">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="userid">
+                    <label class="mdl-textfield__label" for="sample3">User Email Id</label>
+                </div>
 
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="password" id="sample3">
+                    <label class="mdl-textfield__label" for="sample3">Password</label>
+                </div>
+            </form>
+        </div>
+        <div class="mdl-dialog__actions">
+            <button type="button" class="mdl-button" id="cancel-login">Cancel</button>
+            <button type="button" class="mdl-button">Login</button>
+        </div>
+    </dialog>
+
+    <dialog id="register-dialog" class="mdl-dialog register-dialog">
+        <h3 class="mdl-dialog__title">Register</h3>
+        <div class="mdl-dialog__content">
+            <form action="#">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="userid">
+                    <label class="mdl-textfield__label" for="sample3">User Full Name</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="mail" id="userid">
+                    <label class="mdl-textfield__label" for="sample3">Official Email Id</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="tel" id="userid">
+                    <label class="mdl-textfield__label" for="sample3">Mobile</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="password" id="sample3">
+                    <label class="mdl-textfield__label" for="sample3">Set password</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="password" id="sample3">
+                    <label class="mdl-textfield__label" for="sample3">Confirm Password</label>
+                </div>
+
+            </form>
+        </div>
+        <div class="mdl-dialog__actions">
+            <button type="button" class="mdl-button" id="cancel-register">Cancel</button>
+            <button type="button" class="mdl-button">Register</button>
+        </div>
+    </dialog>
 </body>
 
 </html>
