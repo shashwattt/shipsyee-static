@@ -163,6 +163,7 @@ a img {
 }
 
 .shipsyee-be-together-section {
+    color: #fff;
     position: relative;
     height: 800px;
     width: auto;
@@ -171,10 +172,18 @@ a img {
     background-size: cover;
 }
 
+.white {
+    color: white !important;
+}
+
+.select-destination {
+    border-bottom: 1px solid rgba(255, 252, 252, 0.31) !important;
+}
+
 .logo-font {
     font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
     line-height: 1;
-    color: #767777;
+    /* color: #767777; */
     font-weight: 500;
 }
 
@@ -190,12 +199,12 @@ a img {
 
 .shipsyee-create-character {
     font-size: 21px;
-    padding-top: 300px;
+    padding-top: 48px;
 }
 
 .shipsyee-create-character a {
     text-decoration: none;
-    color: #767777;
+    /* color: #767777; */
     font-weight: 300;
 }
 
@@ -485,6 +494,9 @@ a img {
 /**** Mobile layout ****/
 
 @media (max-width: 900px) {
+    .shipsyee-customized-section {
+        display: none;
+    }
     .shipsyee-navigation-container {
         display: none;
     }
@@ -515,6 +527,7 @@ a img {
         width: 100%;
     }
     .shipsyee-be-together-section {
+        color: #fff;
         height: 350px;
     }
     .shipsyee-slogan {
@@ -528,7 +541,7 @@ a img {
         padding-top: 8px;
     }
     .shipsyee-create-character {
-        padding-top: 138px;
+        padding-top: 32px;
         font-size: 16px;
     }
     .shipsyee-create-character img {
